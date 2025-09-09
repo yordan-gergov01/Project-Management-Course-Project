@@ -16,6 +16,7 @@ export interface NoProjectSelectedProps {
 }
 
 export interface SidebarProps {
+  projects: Project[];
   onStartAddProject: () => void;
 }
 

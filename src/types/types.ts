@@ -7,5 +7,5 @@ export type Project = {
   id: number;
   title: string;
   description: string;
-  dieDate: string;
+  dueDate: string;
 };
