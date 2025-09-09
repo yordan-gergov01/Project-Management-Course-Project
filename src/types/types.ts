@@ -2,3 +2,10 @@ export type ProjectsState = {
   selectedProjectId: null | undefined | number;
   projects: any[];
 };
+
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  dieDate: string;
+};

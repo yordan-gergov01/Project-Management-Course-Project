@@ -1,6 +1,9 @@
+import { Project } from "./types";
+
 export interface InputProps {
   textarea: boolean;
   label: string;
+  type?: string;
 }
 
 export interface ButtonProps {
@@ -14,4 +17,8 @@ export interface NoProjectSelectedProps {
 
 export interface SidebarProps {
   onStartAddProject: () => void;
+}
+
+export interface NewProjectProps {
+  onAddProject: (projectData: any) => void;
 }
