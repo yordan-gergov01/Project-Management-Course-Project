@@ -8,7 +8,7 @@ export interface InputProps {
 
 export interface ButtonProps {
   children: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface NoProjectSelectedProps {
@@ -22,4 +22,10 @@ export interface SidebarProps {
 
 export interface NewProjectProps {
   onAddProject: (projectData: any) => void;
+  onCancel: () => void;
+}
+
+export interface ModalProps {
+  children: React.ReactNode;
+  buttonCaption: string;
 }

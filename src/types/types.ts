@@ -9,3 +9,7 @@ export type Project = {
   description: string;
   dueDate: string;
 };
+
+export type ModalHandle = {
+  open: () => void;
+};
