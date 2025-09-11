@@ -18,6 +18,8 @@ export interface NoProjectSelectedProps {
 export interface SidebarProps {
   projects: Project[];
   onStartAddProject: () => void;
+  onSelectProject: (id: number) => void;
+  selectedProjectId: number;
 }
 
 export interface NewProjectProps {
