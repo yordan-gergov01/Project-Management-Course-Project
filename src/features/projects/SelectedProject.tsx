@@ -1,4 +1,6 @@
-function SelectedProject({ project }) {
+import { SelectedProjectProps } from "../../types/interfaces";
+
+function SelectedProject({ project }: SelectedProjectProps) {
   const formattedDate = new Date(project.dueDate).toLocaleDateString("en-Us", {
     year: "numeric",
     month: "short",

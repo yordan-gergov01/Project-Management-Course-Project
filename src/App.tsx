@@ -2,7 +2,9 @@ import { useState } from "react";
 
 import NewProject from "./features/projects/NewProject";
 import NoProjectSelected from "./features/projects/NoProjectSelected";
+import SelectedProject from "./features/projects/SelectedProject";
 import Sidebar from "./ui/Sidebar";
+
 import { ProjectsState } from "./types/types";
 
 function App() {
@@ -52,7 +54,11 @@ function App() {
     });
   }
 
-  let content;
+  const selectedProject = projectsState.projects.find(
+    (project) => project.id === projectsState.selectedProjectId
+  );
+
+  let content = <SelectedProject project={selectedProject} />;
 
   if (projectsState.selectedProjectId === null) {
     content = (

@@ -19,7 +19,7 @@ export interface SidebarProps {
   projects: Project[];
   onStartAddProject: () => void;
   onSelectProject: (id: number) => void;
-  selectedProjectId: number;
+  selectedProjectId?: number;
 }
 
 export interface NewProjectProps {
@@ -30,4 +30,8 @@ export interface NewProjectProps {
 export interface ModalProps {
   children: React.ReactNode;
   buttonCaption: string;
+}
+
+export interface SelectedProjectProps {
+  project: Project;
 }
