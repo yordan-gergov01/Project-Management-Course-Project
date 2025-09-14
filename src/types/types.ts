@@ -1,6 +1,7 @@
 export type ProjectsState = {
   selectedProjectId: null | undefined | number;
   projects: any[];
+  tasks: any[];
 };
 
 export type Project = {
@@ -8,6 +9,11 @@ export type Project = {
   title: string;
   description: string;
   dueDate: string;
+};
+
+export type Task = {
+  id: number;
+  text: string;
 };
 
 export type ModalHandle = {

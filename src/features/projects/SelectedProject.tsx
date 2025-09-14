@@ -1,6 +1,13 @@
 import { SelectedProjectProps } from "../../types/interfaces";
+import Tasks from "../tasks/Tasks";
 
-function SelectedProject({ project, onDelete }: SelectedProjectProps) {
+function SelectedProject({
+  project,
+  tasks,
+  onDelete,
+  onAddTask,
+  onDeleteTask,
+}: SelectedProjectProps) {
   const formattedDate = new Date(project.dueDate).toLocaleDateString("en-Us", {
     year: "numeric",
     month: "short",
@@ -26,6 +33,7 @@ function SelectedProject({ project, onDelete }: SelectedProjectProps) {
           {project.description}
         </p>
       </header>
+      <Tasks tasks={tasks} onAdd={onAddTask} onDelete={onDeleteTask} />
     </div>
   );
 }

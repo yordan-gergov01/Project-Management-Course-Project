@@ -1,4 +1,4 @@
-import { Project } from "./types";
+import { Project, Task } from "./types";
 
 export interface InputProps {
   textarea: boolean;
@@ -34,5 +34,18 @@ export interface ModalProps {
 
 export interface SelectedProjectProps {
   project: Project;
+  tasks: Task[];
   onDelete: () => void;
+  onAddTask: (text: string) => void;
+  onDeleteTask: () => void;
+}
+
+export interface TasksProps {
+  tasks: Task[];
+  onAdd: (text: string) => void;
+  onDelete: () => void;
+}
+
+export interface NewTaskProps {
+  onAdd: (enteredTask: string) => void;
 }
