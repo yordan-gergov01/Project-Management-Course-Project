@@ -1,3 +1,3 @@
 # Project Management
 
-Simple React + TypeScript project for practicing react state management with simple Tailwind styling.
+Simple React + TypeScript project for practicing React state management with simple Tailwind styling.
