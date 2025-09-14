@@ -34,4 +34,5 @@ export interface ModalProps {
 
 export interface SelectedProjectProps {
   project: Project;
+  onDelete: () => void;
 }

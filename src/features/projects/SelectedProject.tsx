@@ -1,6 +1,6 @@
 import { SelectedProjectProps } from "../../types/interfaces";
 
-function SelectedProject({ project }: SelectedProjectProps) {
+function SelectedProject({ project, onDelete }: SelectedProjectProps) {
   const formattedDate = new Date(project.dueDate).toLocaleDateString("en-Us", {
     year: "numeric",
     month: "short",
@@ -14,7 +14,10 @@ function SelectedProject({ project }: SelectedProjectProps) {
           <h1 className="text-3xl font-bold text-stone-600 mb-2">
             {project.title}
           </h1>
-          <button className="text-stone-600 hover:text-stone-950">
+          <button
+            onClick={onDelete}
+            className="text-stone-600 hover:text-stone-950"
+          >
             Delete
           </button>
         </div>
