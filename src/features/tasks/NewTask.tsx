@@ -9,6 +9,10 @@ function NewTask({ onAdd }: NewTaskProps) {
   }
 
   function handleClickAddTask() {
+    if (enteredTask.trim() === "") {
+      return;
+    }
+
     onAdd(enteredTask);
     setEnteredTask("");
   }

@@ -19,7 +19,7 @@ export interface SidebarProps {
   projects: Project[];
   onStartAddProject: () => void;
   onSelectProject: (id: number) => void;
-  selectedProjectId?: number;
+  selectedProjectId?: number | null;
 }
 
 export interface NewProjectProps {
@@ -37,13 +37,13 @@ export interface SelectedProjectProps {
   tasks: Task[];
   onDelete: () => void;
   onAddTask: (text: string) => void;
-  onDeleteTask: () => void;
+  onDeleteTask: (id: number) => void;
 }
 
 export interface TasksProps {
   tasks: Task[];
   onAdd: (text: string) => void;
-  onDelete: () => void;
+  onDelete: (id: number) => void;
 }
 
 export interface NewTaskProps {
